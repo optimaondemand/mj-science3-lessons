@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>M/J Comprehensive Science 3 &mdash; Lesson 1.1: Detective Work</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto 40px auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    /* ===== WIDGET CSS -- byte-consistent with references/widgets.md ===== */
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .ow-scale .widget-options { justify-content: space-between; }
+    .ow-scale .widget-options button { flex: 1; text-align: center; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div><div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div><div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div></div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">M/J COMPREHENSIVE SCIENCE 3</div>
+</div>
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;"><div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Module</div><div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div><div style="font-size: 12px; color: #666;">Nature of Science</div></div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;"><div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div><div style="font-size: 17px; color: #0e1c42;">Lesson 1.1</div></div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;"><div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div><div style="font-size: 17px; color: #0e1c42; font-style: italic;">Observations, Inferences, and Good Questions</div></div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;"><div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Module Theme</div><div style="font-size: 16px; color: #0e1c42;">Nature of Science</div></div>
+</div>
+<div style="padding: 24px 34px;">
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 1.1</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Detective Work: Observations, Inferences, and Good Questions</div>
+        <div style="font-size: 16px; color: #666;">Lesson</div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">You already do this every day. Today you find out why it matters to science.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">A detective at a crime scene notices a broken window (that's an observation) and decides someone broke in (that's an inference). Scientists do the exact same thing, just with atoms, ecosystems, and stars instead of crime scenes. This lesson trains you to catch the difference, because mixing them up is one of the most common ways people fool themselves into believing something that isn't true.</div>
+    </div>
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> tell the difference between an observation and an inference in a real example.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain why scientists rely on evidence, logical reasoning, <em>and</em> imagination together, not just one of the three.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 0;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> turn a vague question into a testable one.</div></div>
+    </div>
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">A notebook, blank document, or scratch paper for a quick sort activity</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 0; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span><div style="font-size: 18px; color: #1a2340; line-height: 1.6;">One small object near you right now (a pencil, a shoe, a cup &mdash; anything works)</div></div>
+    </div>
+
+    <!-- PART 1 -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; OBSERVATION OR INFERENCE?</div>
+
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
+            <div class="widget-question">Look at the object you grabbed. Without thinking too hard, what's the first thing you notice about it? (No wrong answer, just check in with yourself.)</div>
+            <div class="widget-options">
+                <button data-response="Good. That's a real observation, something your senses picked up directly. Hang onto that thought for a second.">&#128064; Something about how it looks</button>
+                <button data-response="Also a real observation. Texture, weight, temperature all count just as much as sight.">&#9995; Something about how it feels</button>
+                <button data-response="Interesting. Notice that this one is already closer to a guess about the object than a plain description of it. We'll come back to that.">&#129504; What it's probably used for</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Two words, one huge difference</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">An <span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="Information gathered directly through your senses or an instrument.">observation</span> is something you directly detect: you saw it, heard it, measured it, smelled it. An <span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="A conclusion based on observations plus reasoning or prior knowledge.">inference</span> is a conclusion you build on top of an observation, using reasoning or something you already know. "The sidewalk is wet" is an observation. "It rained last night" is an inference built from that observation, and it might be wrong (a sprinkler could have done it).</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Scientists live in the gap between these two words. Every scientific explanation is an inference sitting on top of a pile of observations, and good scientists stay honest about which is which.</p>
+
+        <div style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #1B6A94; margin-bottom: 8px;">&#128161; DID YOU KNOW?</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">The same set of observations can support more than one inference. Two students can watch the exact same event and reasonably infer different things. That's not a flaw in science, that's why scientists test their inferences instead of just trusting the first one that occurs to them.</div>
+        </div>
+
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; OBSERVATION OR INFERENCE?</div>
+            <div class="widget-question">Sort each statement. Is it something a person directly detected, or a conclusion built on top of a detection?</div>
+            <div class="widget-row" data-correct="1" data-fb="Right. &ldquo;Melted&rdquo; is directly visible. Nothing about a cause was added yet." data-hint="Look again. Is this describing what was directly seen, or explaining why it happened?">
+                <div class="widget-row-prompt">1. &ldquo;The ice cream is melted and runny.&rdquo;</div>
+                <div class="widget-options"><button data-choice="0">Inference</button><button data-choice="1">Observation</button></div>
+            </div>
+            <div class="widget-row" data-correct="0" data-fb="Right. Nobody directly saw the freezer door open. That's a guess built on the melted ice cream, which is a reasonable one, but still a guess." data-hint="Was &ldquo;someone left the door open&rdquo; directly seen, or is it explaining the melted ice cream?">
+                <div class="widget-row-prompt">2. &ldquo;Someone must have left the freezer door open.&rdquo;</div>
+                <div class="widget-options"><button data-choice="0">Inference</button><button data-choice="1">Observation</button></div>
+            </div>
+            <div class="widget-row" data-correct="1" data-fb="Right. A thermometer reading is a direct measurement, which counts as an observation even though an instrument did the sensing instead of your eyes." data-hint="A number from a thermometer is data straight from an instrument. Is that a guess, or a direct reading?">
+                <div class="widget-row-prompt">3. &ldquo;The thermometer reads 91&deg;F.&rdquo;</div>
+                <div class="widget-options"><button data-choice="0">Inference</button><button data-choice="1">Observation</button></div>
+            </div>
+            <div class="widget-row" data-correct="0" data-fb="Right. Nobody watched the ice cream sit in a hot car. That explanation connects the observations (melted, warm) to a cause that wasn't directly seen." data-hint="Was the car directly observed, or is this explaining the first two observations?">
+                <div class="widget-row-prompt">4. &ldquo;It probably sat in a hot car.&rdquo;</div>
+                <div class="widget-options"><button data-choice="0">Inference</button><button data-choice="1">Observation</button></div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- PART 2 -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; EVIDENCE, REASONING, AND IMAGINATION</div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 0 0 8px 0;">Science needs all three, not just facts</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">People sometimes picture science as just "collecting facts." It's more than that. Every real scientific investigation runs on three ingredients working together: <strong>empirical evidence</strong> (observations and data you actually collected), <strong>logical reasoning</strong> (using that evidence to build a case, step by step), and <strong>imagination</strong> (coming up with an explanation or model in the first place, since evidence doesn't invent its own explanation).</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Charles Darwin didn't discover natural selection by staring at finches until an answer appeared. He collected years of evidence, reasoned carefully about what patterns it showed, and then had to imagine a mechanism that could explain all of it. Take away any one of the three and the explanation falls apart: evidence alone is just a pile of data, reasoning alone with no evidence is just speculation, and imagination alone with no evidence or reasoning is fiction.</p>
+
+        <details style="background: #FFFFFF; border: 1px solid #D0D9E8; border-left: 4px solid #C7922C; border-radius: 6px; padding: 12px 18px; margin: 14px 0;">
+            <summary style="font-size: 16px; color: #0E1C42; cursor: pointer; list-style: none;"><span style="color: #C7922C;">&#9654;</span>&nbsp; Try it: A friend says, &ldquo;My lucky socks helped my team win, so I'm wearing them every game now.&rdquo; Which of the three ingredients is missing?</summary>
+            <div style="font-size: 17px; color: #1a2340; line-height: 1.6; margin-top: 10px; padding-top: 10px; border-top: 1px solid #EEF1F8;">
+                Think it through before you look.
+                <details style="background: #F4F6FA; border: 1px solid #D0D9E8; border-left: 4px solid #C7922C; border-radius: 6px; padding: 10px 16px; margin: 10px 0 0 0;">
+                    <summary style="font-size: 15px; color: #0E1C42; cursor: pointer; list-style: none;"><span style="color: #C7922C;">&#9654;</span>&nbsp; Check your thinking</summary>
+                    <div style="font-size: 16px; color: #1a2340; line-height: 1.6; margin-top: 8px;">Logical reasoning is missing. One win with the socks is a single data point, and there's no reasoning connecting sock color to athletic performance. A scientist would ask: did the team also win games without the socks? Is there any mechanism that could connect the two?</div>
+                </details>
+            </div>
+        </details>
+    </div>
+
+    <!-- PART 3 -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; FROM WONDERING TO A TESTABLE QUESTION</div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 0 0 8px 0;">Not every question can be tested</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">"Why is my plant dying?" is a real question, but it's too vague to test directly. A testable question narrows things down to something you can actually investigate: "Does my plant get less sunlight than the other plants on the windowsill?" Turning a vague wondering into a testable question is the first move in any real investigation, and it's a skill you'll use in almost every unit this year.</p>
+
+        <div class="optima-widget ow-scale">
+            <div class="widget-kicker">&#9889; RATE IT &middot; HOW TESTABLE IS THIS QUESTION?</div>
+            <div class="widget-question">&ldquo;Does adding more salt to water change how much a ball floats in it?&rdquo;</div>
+            <div class="widget-row" data-correct="4" data-fb="Right, this is highly testable. It names a variable you can change (salt amount), something you can measure (how much the ball floats), and it's something you could actually set up at home." data-hint="Look for a variable that can be changed and something that can be measured. Does this question have both?">
+                <div class="widget-options">
+                    <button data-choice="0">Not testable at all</button>
+                    <button data-choice="1">Barely testable</button>
+                    <button data-choice="2">Somewhat testable</button>
+                    <button data-choice="3">Mostly testable</button>
+                    <button data-choice="4">Highly testable</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- PART 4 -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 4 &middot; IS IT SCIENCE?</div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 0 0 8px 0;">Science has to be testable and open to being wrong</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Not every claim that sounds scientific actually is one. A <span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="An idea presented as scientific that isn't actually tested with evidence, or is protected from ever being proven wrong.">pseudoscientific</span> claim usually shares one problem: there's no real way to test it, or its supporters change the explanation every time evidence goes against it so it can never be proven wrong. Real science stays open to being wrong. That's not a weakness, it's the whole point.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Two more words you'll use constantly this year: a <span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="A representation of an idea, object, or process used to explain or predict something.">model</span> is a way of representing an idea so people can reason about it (a diagram of the water cycle, a physical model of an atom, a computer simulation of a hurricane). A <span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="A well-supported explanation, backed by extensive evidence, for a broad set of observations.">scientific theory</span> is a well-tested explanation backed by huge amounts of evidence, not a guess (that's a common mix-up: in everyday talk &ldquo;theory&rdquo; means a hunch, but in science it means the opposite, an idea that has survived a mountain of testing). Theories get modified when new evidence demands it, but they're rarely thrown out completely, because it usually takes an enormous amount of evidence to build one in the first place.</p>
+
+        <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; COMMON MISTAKE</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">Don't confuse &ldquo;it's just a theory&rdquo; (everyday meaning: an unproven guess) with a scientific theory (an explanation supported by decades of evidence, like the theory of evolution or the theory of gravity). In science, the word is a compliment, not an insult.</div>
+        </div>
+
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; SCIENCE OR PSEUDOSCIENCE?</div>
+            <div class="widget-question">For each claim, decide whether it's built and tested the way real science is, or whether it dodges being tested.</div>
+            <div class="widget-row" data-correct="1" data-fb="Right. This makes a specific, testable prediction, and it has been tested thousands of times with the same result." data-hint="Ask: could this claim actually be proven wrong by an experiment? Has it been tested?">
+                <div class="widget-row-prompt">1. &ldquo;Plants grown in total darkness will not produce chlorophyll, and this has been tested in thousands of experiments.&rdquo;</div>
+                <div class="widget-options"><button data-choice="0">Pseudoscience</button><button data-choice="1">Science</button></div>
+            </div>
+            <div class="widget-row" data-correct="0" data-fb="Right. There's no proposed way to test this, and no mechanism connecting gemstone color to health has ever been measured." data-hint="Is there any experiment that could show this claim is false? Has anyone proposed how it would even work?">
+                <div class="widget-row-prompt">2. &ldquo;This crystal heals any illness because it channels positive energy, and you can't measure the energy because it's beyond science.&rdquo;</div>
+                <div class="widget-options"><button data-choice="0">Pseudoscience</button><button data-choice="1">Science</button></div>
+            </div>
+            <div class="widget-row" data-correct="0" data-fb="Right. When a claim's supporters change the explanation every time it fails a test instead of revising or rejecting the idea, that's a sign it isn't being held to scientific standards." data-hint="What happens to this claim when a prediction fails? Does the explanation change to dodge the failure?">
+                <div class="widget-row-prompt">3. &ldquo;My psychic predictions are always right, and if one doesn't come true, it's because the future changed.&rdquo;</div>
+                <div class="widget-options"><button data-choice="0">Pseudoscience</button><button data-choice="1">Science</button></div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;"><div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div><div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Notebook Entry: The Mystery Object</strong></div><div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Pick an everyday object and separate what you actually observe from what you infer about it.</div></div></div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;"><div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div><div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>VR Activity 1: The Observation Deck</strong></div><div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Head into VR and practice sorting observations from inferences on a real phenomenon.</div></div></div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 0;"><div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div><div><div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>VR Activity 2: Sort the Claims</strong></div><div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Sort real-world claims into science and pseudoscience in a gallery location, and explain your reasoning.</div></div></div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 0;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; BEFORE YOU MOVE ON</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">You now have a habit to carry through the rest of this course: whenever you read or hear a scientific claim, ask yourself what part is direct observation and what part is inference. You'll use that habit again in about two weeks when we look at whether a claim counts as science at all.</p>
+    </div>
+</div>
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; M/J COMPREHENSIVE SCIENCE 3 &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 1.1 &middot; Observations, Inferences, and Good Questions</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+</div>
+
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
