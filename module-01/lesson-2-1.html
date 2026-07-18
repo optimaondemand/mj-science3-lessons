@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>M/J Comprehensive Science 3 &mdash; Lesson 2.1: Building a Real Investigation</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto 40px auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    /* ===== WIDGET CSS -- byte-consistent with references/widgets.md ===== */
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .ow-scale .widget-options { justify-content: space-between; }
+    .ow-scale .widget-options button { flex: 1; text-align: center; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div><div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div><div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div></div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">M/J COMPREHENSIVE SCIENCE 3</div>
+</div>
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;"><div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Module</div><div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div><div style="font-size: 12px; color: #666;">Nature of Science</div></div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;"><div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div><div style="font-size: 17px; color: #0e1c42;">Lesson 2.1</div></div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;"><div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div><div style="font-size: 17px; color: #0e1c42; font-style: italic;">Building a Real Investigation</div></div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;"><div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Module Theme</div><div style="font-size: 16px; color: #0e1c42;">Nature of Science</div></div>
+</div>
+<div style="padding: 24px 34px;">
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 2.1</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Building a Real Investigation</div>
+        <div style="font-size: 16px; color: #666;">Lesson</div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">A testable question is only the start. Now you need a test that's actually fair.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Last week you learned to tell observation from inference and science from pseudoscience. This week you build the actual machinery of an investigation: variables, fair tests, and what to do with results that don't go the way you expected. This is the toolkit you'll use in every single unit for the rest of the year.</div>
+    </div>
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> identify the independent variable, dependent variable, and controlled variables in an investigation.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain why results either support or fail to support a hypothesis, without ever claiming to have &ldquo;proven&rdquo; it.</div></div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 0;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div><div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain how science, politics, and economics can affect each other.</div></div>
+    </div>
+
+    <!-- PART 1 -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; VARIABLES AND FAIR TESTS</div>
+
+        <div class="optima-widget ow-reflect">
+            <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
+            <div class="widget-question">Someone tests whether music helps you study by having you study with music one night and in silence the next night, on two different subjects, at two different times of day. What's your gut reaction to this test? (No wrong answer.)</div>
+            <div class="widget-options">
+                <button data-response="You're picking up on something real. When too many things change at once, you can't tell which change actually caused the result.">&#129300; Something feels off about it</button>
+                <button data-response="Sounds fair on the surface, but hold that thought through Part 1, you might change your mind.">&#128077; Seems like a fair comparison</button>
+                <button data-response="Fair. Let's build the vocabulary to say exactly what's wrong (or right) with a test like this.">&#129335; Not sure how to judge it</button>
+            </div>
+            <div class="widget-feedback"></div>
+            <button class="widget-reset">Reset</button>
+        </div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Change one thing at a time</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In a fair test, you deliberately change one thing (the <span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="The one factor a scientist deliberately changes in an experiment.">independent variable</span>), you measure what happens to another thing (the <span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="The factor that is measured, and that may change in response to the independent variable.">dependent variable</span>), and you keep everything else the same (the <span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="Factors that are kept the same across all trials so they don't interfere with the result.">controlled variables</span>). In the music-and-studying example, the subject, the time of day, and the material studied all changed too, so you can't tell whether music, the subject, or the time of day caused any difference in the score.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Good investigations also run <span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="Doing the same test more than once to check that a result is consistent, not a fluke.">repeated trials</span> and get checked through <span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="Other scientists running the same investigation independently to see if they get the same result.">replication</span>. One trial could be a fluke. Ten trials with the same pattern are much harder to dismiss.</p>
+
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; NAME THE VARIABLE</div>
+            <div class="widget-question">A student wants to know if the amount of sunlight affects how tall a bean plant grows. They put identical plants in identical soil and pots, water them the same amount, and give each pot a different number of hours of sunlight per day. After 3 weeks, they measure each plant's height.</div>
+            <div class="widget-row" data-correct="2" data-fb="Right, hours of sunlight is the one thing the student deliberately changed on purpose." data-hint="Which factor did the student deliberately change between the pots?">
+                <div class="widget-row-prompt">1. What is the independent variable?</div>
+                <div class="widget-options"><button data-choice="0">Plant height</button><button data-choice="1">Amount of soil</button><button data-choice="2">Hours of sunlight</button></div>
+            </div>
+            <div class="widget-row" data-correct="0" data-fb="Right, plant height is what got measured as the outcome." data-hint="Which factor was measured as the result, at the end?">
+                <div class="widget-row-prompt">2. What is the dependent variable?</div>
+                <div class="widget-options"><button data-choice="0">Plant height</button><button data-choice="1">Hours of sunlight</button><button data-choice="2">Type of plant</button></div>
+            </div>
+            <div class="widget-row" data-correct="1" data-fb="Right, the amount of water was deliberately kept the same across every pot, which makes it a controlled variable." data-hint="Which factor was kept identical across every pot on purpose?">
+                <div class="widget-row-prompt">3. Which of these is a controlled variable in this investigation?</div>
+                <div class="widget-options"><button data-choice="0">Plant height</button><button data-choice="1">Amount of water</button><button data-choice="2">Hours of sunlight</button></div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- PART 2 -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; WHAT THE EVIDENCE ACTUALLY SAYS</div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 0 0 8px 0;">Science never &ldquo;proves&rdquo; anything</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">This might be the single most important habit in this whole module: scientists don't say a hypothesis is "proven." They say the results <strong>support</strong> the hypothesis, or the results <strong>fail to support</strong> it. That's not scientists being timid, it's them being honest. New evidence could always show up tomorrow that changes the picture, and language that admits that possibility keeps science self-correcting.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Here's the part most people get backwards: a hypothesis that fails to be supported isn't a failed investigation. If your data doesn't match your prediction, you just learned something real, and that often points toward a better question. Real scientific progress runs on hypotheses that turn out to be wrong just as much as ones that turn out to be right.</p>
+
+        <details style="background: #FFFFFF; border: 1px solid #D0D9E8; border-left: 4px solid #C7922C; border-radius: 6px; padding: 12px 18px; margin: 14px 0;">
+            <summary style="font-size: 16px; color: #0E1C42; cursor: pointer; list-style: none;"><span style="color: #C7922C;">&#9654;</span>&nbsp; Try it: A student hypothesizes that plants grow taller with more sunlight, but their data shows no real difference between groups. What should the student say happened?</summary>
+            <div style="font-size: 17px; color: #1a2340; line-height: 1.6; margin-top: 10px; padding-top: 10px; border-top: 1px solid #EEF1F8;">
+                Write your own answer first.
+                <details style="background: #F4F6FA; border: 1px solid #D0D9E8; border-left: 4px solid #C7922C; border-radius: 6px; padding: 10px 16px; margin: 10px 0 0 0;">
+                    <summary style="font-size: 15px; color: #0E1C42; cursor: pointer; list-style: none;"><span style="color: #C7922C;">&#9654;</span>&nbsp; Check your thinking</summary>
+                    <div style="font-size: 16px; color: #1a2340; line-height: 1.6; margin-top: 8px;">&ldquo;My results fail to support my hypothesis that sunlight affects plant height&rdquo; is the honest, scientific way to say it. That's not a failure. It's a real finding that could lead to a new question, maybe another factor matters more than sunlight in this range.</div>
+                </details>
+            </div>
+        </details>
+    </div>
+
+    <!-- PART 3 -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; SCIENCE LOOKS DIFFERENT ACROSS FIELDS</div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 0 0 8px 0;">One method doesn't fit every science</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">A chemist can mix chemicals in a controlled lab and run the same reaction a hundred times. An astronomer studying a galaxy a billion light-years away can't run a controlled experiment on it at all, they observe, collect data from telescopes, and build models that fit the evidence. A biologist studying how species change over millions of years relies heavily on fossil evidence and comparison instead of quick repeatable trials. All three are doing real science; they're just using the methods that actually fit what they're studying.</p>
+        <div style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #1B6A94; margin-bottom: 8px;">&#128161; CONNECTION</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">You'll see this exact pattern again this year: physical science units will lean on controlled lab-style tests, while the space unit in the Spring semester will lean much more on observation, models, and technology, because you can't run a controlled experiment on a star.</div>
+        </div>
+    </div>
+
+    <!-- PART 4 -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 4 &middot; SCIENCE DOESN'T HAPPEN IN A BUBBLE</div>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 0 0 8px 0;">Science informs decisions, and decisions shape science</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Communities, states, and countries use science to make real decisions, like where to build a hospital based on flood-risk data, or how to respond to a disease outbreak. But it runs both ways: political priorities, funding decisions, and economic pressures also affect which questions get studied and how quickly. A government that funds hurricane research heavily will produce more hurricane science than one that doesn't, regardless of which question is more scientifically interesting.</p>
+
+        <div class="optima-widget ow-scale">
+            <div class="widget-kicker">&#9889; PLACE IT &middot; SCIENCE AND SOCIETY</div>
+            <div class="widget-question">&ldquo;A city decides where to build a new seawall based on data from ocean scientists tracking sea-level rise.&rdquo; How directly does this show science informing a real decision?</div>
+            <div class="widget-row" data-correct="4" data-fb="Right, this is about as direct as it gets: real data feeding directly into a real infrastructure decision." data-hint="Is the data being used directly to make the decision, or is it more indirect than that?">
+                <div class="widget-options">
+                    <button data-choice="0">Not related</button>
+                    <button data-choice="1">Barely related</button>
+                    <button data-choice="2">Somewhat related</button>
+                    <button data-choice="3">Mostly related</button>
+                    <button data-choice="4">Directly related</button>
+                </div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 0;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;"><div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div><div><div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>At-Home Investigation: Does It Sink or Float?</strong></div><div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Run a real fair test with variables you control, using stuff from around your house.</div></div></div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;"><div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div><div><div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Discussion: Can Politics Change Science?</strong></div><div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Make a claim about science and society and respond to a classmate's reasoning.</div></div></div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 0;"><div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div><div><div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>VR Activity 3: Run the Trial</strong></div><div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Test a variable with repeated trials in VR and log your data.</div></div></div>
+    </div>
+</div>
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; M/J COMPREHENSIVE SCIENCE 3 &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 2.1 &middot; Building a Real Investigation</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+</div>
+
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
