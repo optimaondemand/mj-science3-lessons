@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>M/J Comprehensive Science 3 &mdash; Lesson 4.1: Diffusion and Particle Speed</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto 40px auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .ow-scale .widget-options { justify-content: space-between; }
+    .ow-scale .widget-options button { flex: 1; text-align: center; }
+</style>
+</head>
+<body>
+
+<div class="canvas-frame">
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;"><div style="font-size: 32px; color: #ffffff;">M/J COMPREHENSIVE SCIENCE 3</div></div>
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;"><div style="font-size: 11px; color: #6b7a99;">Quarter / Module</div><div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 2</div></div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;"><div style="font-size: 11px; color: #6b7a99;">Lesson</div><div style="font-size: 17px; color: #0e1c42;">Lesson 4.1</div></div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;"><div style="font-size: 11px; color: #6b7a99;">Topic</div><div style="font-size: 17px; color: #0e1c42; font-style: italic;">Diffusion and Particle Speed</div></div>
+</div>
+<div style="padding: 24px 34px;">
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;"><div style="font-size: 22px; color: #0e1c42;">Diffusion and Particle Speed</div></div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Why does a drop of food coloring spread through hot water faster than cold water?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">You already know particles move faster when a substance is hotter. Today you use that idea to predict and explain diffusion, the way particles spread out from where they're concentrated to where they're not, just from their own random motion.</div>
+    </div>
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; gap: 12px; margin-bottom: 0;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center;">1</div><div style="font-size: 18px; color: #1a2340;"><strong>I will be able to</strong> predict and explain how temperature affects the rate of diffusion, using the particle model.</div></div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; DIFFUSION, PARTICLE BY PARTICLE</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65;"><span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="The spreading of particles from an area where they're concentrated to an area where they're less concentrated.">Diffusion</span> happens because particles are always moving randomly, bumping into each other and everything around them. There's no plan involved, no particle "decides" to spread out. It's simple statistics: with so many particles moving randomly, they naturally end up more spread out over time, the same way a drop of dye eventually colors an entire glass of water evenly.</p>
+        <div class="optima-widget ow-scale">
+            <div class="widget-kicker">&#9889; PREDICT IT</div>
+            <div class="widget-question">A drop of food coloring is placed in a cup of hot water and an identical drop in a cup of ice water at the same time. How much faster do you predict the color will spread in the hot water?</div>
+            <div class="widget-row" data-correct="3" data-fb="Right direction, but for two reasons: warmer particles move faster and collide more often (diffusion), and warm water is also less dense, so it rises and sinks in currents (convection) that physically carry the dye along. Both effects push the same way, which is why the color spreads so much faster in the hot cup." data-hint="Think about particle speed, but also think about what warm water itself does inside a cup of cold water.">
+                <div class="widget-options"><button data-choice="0">Same speed in both</button><button data-choice="1">Slightly slower in hot water</button><button data-choice="2">About the same, maybe a little faster</button><button data-choice="3">Noticeably faster in hot water</button></div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; AN HONEST COMPLICATION: CONVECTION</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65;">Before you run your own test, here's a complication worth knowing about. Diffusion by itself is slow. Left completely undisturbed, a drop of dye spreading through still water by diffusion alone can take hours to noticeably color a whole glass. Most of what you're about to watch happen in just a few minutes isn't diffusion working alone. It's mostly <span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="The circulation of a fluid caused by temperature differences: warmer, less dense fluid rises while cooler, denser fluid sinks, physically carrying along whatever is dissolved or suspended in it.">convection</span>, currents of the water itself moving because warm water is less dense than cool water. Those currents carry the dye along on top of, and much faster than, particle-level diffusion.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65;">That doesn't make the investigation pointless. It makes it more honest. Temperature really is still speeding up diffusion at the particle level, exactly like the model predicts, but it's also driving convection currents that a simple open cup can't separate out. Naming that limitation clearly, instead of overclaiming what you measured, is part of doing the investigation well.</p>
+    </div>
+
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 0;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; gap: 14px; margin-bottom: 16px;"><div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center;">1</div><div><div style="font-size: 18px; color: #0e1c42;"><strong>At-Home Investigation: Race the Colors</strong></div><div style="font-size: 16px; color: #1a2340;">Test how fast color spreads in hot vs. cold water, and reason about both diffusion and convection.</div></div></div>
+        <div style="display: flex; gap: 14px;"><div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center;">2</div><div><div style="font-size: 18px; color: #0e1c42;"><strong>VR Activity: File the Evidence</strong></div><div style="font-size: 16px; color: #1a2340;">Compile this module's evidence into your Case File.</div></div></div>
+    </div>
+</div>
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;"><div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online</div></div>
+</div>
+
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      return;
+    }
+    var sBtn = e.target.closest('.ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
