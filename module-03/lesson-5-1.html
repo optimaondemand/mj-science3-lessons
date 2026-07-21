@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lesson 5.1 &mdash; Mass, Weight, and Density</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto 40px auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .ow-scale .widget-options { justify-content: space-between; }
+    .ow-scale .widget-options button { flex: 1; text-align: center; }
+</style>
+</head>
+<body>
+
+<div class="canvas-frame">
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;"><div style="font-size: 32px; color: #ffffff;">M/J COMPREHENSIVE SCIENCE 3</div></div>
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;"><div style="font-size: 11px; color: #6b7a99;">Quarter / Module</div><div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 3</div></div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;"><div style="font-size: 11px; color: #6b7a99;">Lesson</div><div style="font-size: 17px; color: #0e1c42;">Lesson 5.1</div></div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;"><div style="font-size: 11px; color: #6b7a99;">Topic</div><div style="font-size: 17px; color: #0e1c42; font-style: italic;">Mass, Weight, and Density</div></div>
+</div>
+<div style="padding: 24px 34px;">
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;"><div style="font-size: 22px; color: #0e1c42;">Mass, Weight, and Density</div></div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">You'd weigh about six times less on the Moon. Would you be six times less "you"?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">People use "mass" and "weight" like they mean the same thing, but they don't, and the difference matters for the rest of this unit. Once you've got that sorted, you'll combine mass with volume to calculate density, the property that tells you why a bowling ball and a beach ball can be the same size and feel completely different.</div>
+    </div>
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; gap: 12px; margin-bottom: 12px;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center;">1</div><div style="font-size: 18px; color: #1a2340;"><strong>I will be able to</strong> explain the difference between mass and weight.</div></div>
+        <div style="display: flex; gap: 12px; margin-bottom: 0;"><div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center;">2</div><div style="font-size: 18px; color: #1a2340;"><strong>I will be able to</strong> calculate density from mass and volume, and explain what the number means.</div></div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; MASS DOESN'T CARE WHERE YOU ARE</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65;"><span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="The amount of matter in an object.">Mass</span> is the amount of matter in something, and it doesn't change no matter where that something is. <span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="The gravitational pull on an object; proportional to mass but not identical to it.">Weight</span> is the force of gravity pulling on that mass, and gravity is different in different places. The Moon's gravity is weaker than Earth's, so a rock with a certain mass would weigh less there, even though it's still exactly the same rock, made of exactly the same amount of matter.</p>
+        <div class="optima-widget ow-select">
+            <div class="widget-kicker">&#9889; TRY IT &middot; MASS OR WEIGHT?</div>
+            <div class="widget-question">Decide whether each statement is describing mass or weight.</div>
+            <div class="widget-row" data-correct="0" data-fb="Right, this describes the amount of matter, which stays the same everywhere." data-hint="Does this describe gravity's pull, or the amount of matter itself?">
+                <div class="widget-row-prompt">1. &ldquo;This astronaut is made of 70 kilograms of matter, on Earth or on the Moon.&rdquo;</div>
+                <div class="widget-options"><button data-choice="0">Mass</button><button data-choice="1">Weight</button></div>
+            </div>
+            <div class="widget-row" data-correct="1" data-fb="Right, this changes based on gravity, which is what weight measures." data-hint="Does this change depending on location, or stay fixed?">
+                <div class="widget-row-prompt">2. &ldquo;This astronaut would feel about six times lighter on the Moon than on Earth.&rdquo;</div>
+                <div class="widget-options"><button data-choice="0">Mass</button><button data-choice="1">Weight</button></div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; DENSITY: HOW PACKED IN IS THE MATTER?</div>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65;"><span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="Mass divided by volume; how much matter is packed into a given space.">Density</span> tells you how much mass is packed into a given amount of space: density = mass &divide; volume. A brick and a sponge can be the same size (same volume), but the brick has way more mass packed into that space, so it's denser. Density is one of the most useful properties in this whole unit because, unlike total mass or total weight, it stays the same no matter how big or small your sample is: a teaspoon of gold and a brick of gold have the exact same density.</p>
+        <div style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+            <div style="font-size: 11px; color: #1B6A94; margin-bottom: 8px;">&#128161; WORKED EXAMPLE</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">A rock has a mass of 45 grams and a volume of 15 cm&sup3;. Density = 45 &divide; 15 = 3 g/cm&sup3;. Since water's density is 1 g/cm&sup3;, this rock (3 g/cm&sup3;) would sink.</div>
+        </div>
+        <div class="optima-widget ow-scale">
+            <div class="widget-kicker">&#9889; CALCULATE IT</div>
+            <div class="widget-question">An object has a mass of 24 grams and a volume of 8 cm&sup3;. What is its density, and will it float or sink in water (density 1 g/cm&sup3;)?</div>
+            <div class="widget-row" data-correct="2" data-fb="Right: 24 &divide; 8 = 3 g/cm&sup3;, which is denser than water, so it sinks." data-hint="Divide mass by volume first, then compare your answer to water's density of 1 g/cm&sup3;.">
+                <div class="widget-options"><button data-choice="0">1 g/cm&sup3;, floats</button><button data-choice="1">0.3 g/cm&sup3;, floats</button><button data-choice="2">3 g/cm&sup3;, sinks</button><button data-choice="3">32 g/cm&sup3;, sinks</button></div>
+            </div>
+            <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 0;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; gap: 14px; margin-bottom: 16px;"><div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center;">1</div><div><div style="font-size: 18px; color: #0e1c42;"><strong>Density Calculation Practice</strong></div><div style="font-size: 16px; color: #1a2340;">Practice the density formula with real-world objects.</div></div></div>
+        <div style="display: flex; gap: 14px;"><div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center;">2</div><div><div style="font-size: 18px; color: #0e1c42;"><strong>VR Activity: Same Mass, Different Weight</strong></div><div style="font-size: 16px; color: #1a2340;">Compare weight across worlds while mass stays constant.</div></div></div>
+    </div>
+</div>
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;"><div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online</div></div>
+</div>
+
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+})();
+</script>
+
+</body>
+</html>
